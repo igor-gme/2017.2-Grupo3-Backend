@@ -25,7 +25,7 @@ SECRET_KEY = '^663*^aebm+fc(-laoybct1lelo545u8$vjhr=va2@=@r(v22y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,10 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'counselor'
+    'counselor',
+    'backend',
+    'rest_framework'
 ]
 
-AUTH_USER_MODEL = 'auth.User'
+AUTH_USER_MODEL = 'counselor.Counselor'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

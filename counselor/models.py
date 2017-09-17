@@ -2,7 +2,7 @@
 
 from django.db import models
 from django.contrib.auth.models import (
-    BaseUserManager, AbstractBaseUser, PermissionsMixin
+    BaseUserManager, AbstractBaseUser
 )
 
 
@@ -18,7 +18,7 @@ class CounselorManager(BaseUserManager):
 
         return counselor
 
-    def create_super_user(self, cpf, email, phone, first_name, password):
+    def create_superuser(self, cpf, email, phone, first_name, password):
         counselor = Counselor()
         counselor.email = self.normalize_email(email)
         counselor.phone = phone
